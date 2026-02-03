@@ -1,0 +1,19 @@
+# Global configuration for all services
+spring:
+  application:
+    name: global-config
+  
+# Common properties
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.example: DEBUG
+    org.springframework.cloud: DEBUG

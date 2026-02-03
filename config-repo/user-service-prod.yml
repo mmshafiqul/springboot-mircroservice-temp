@@ -1,0 +1,24 @@
+# Production environment specific configuration for user-service
+spring:
+  jpa:
+    show-sql: false
+  h2:
+    console:
+      enabled: false
+
+logging:
+  level:
+    com.example.userservice: INFO
+    org.springframework.web: WARN
+
+# Production database configuration (example with PostgreSQL)
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://localhost:5432/userdb
+#     username: ${DB_USERNAME:user}
+#     password: ${DB_PASSWORD:password}
+#     driver-class-name: org.postgresql.Driver
+#   jpa:
+#     database-platform: org.hibernate.dialect.PostgreSQLDialect
+#     hibernate:
+#       ddl-auto: validate
